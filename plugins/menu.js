@@ -272,7 +272,7 @@ let usrs = db.data.users[m.sender]
     let wktuwib = `${wibh} H ${wibm} M ${wibs} S`
  
 let tek = `
-  「 FANGZBOT-MD ⁩㊣ 」
+  「 Luccy-MD ⁩㊣ 」
 
  ╭──〔  𝐈𝐍𝐅𝐎 𝐔𝐒𝐄𝐑  〕─⬣ 
  │⬡ User :  *${await conn.getName(m.sender)}*
@@ -294,7 +294,7 @@ let tek = `
 `
 const listMessage = {
   text: tek,
-  footer: '© Luccy XD | ALL RESERVED',
+  footer: '© LuxxyVFX | ALL RESERVED',
   mentions: await conn.parseMention(tek),
   title: ``,
   buttonText: `LIST MENU`,
@@ -591,7 +591,7 @@ function _0x1766() {
                 {
                     urlButton: {
                         displayText: `${namebot}`,
-                        url: 'https://fangzbot.websites.co.in/'
+                        url: 'https://linktr.ee/luxxyxyz'
                     }
                 },
                 {
