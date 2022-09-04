@@ -48,7 +48,7 @@ global.donate = '〔 Dᴏɴᴛ ғᴏʀɢᴇᴛ Dᴏɴᴀᴛɪᴏɴ 〕\n\n››
 
 /*⫘⫘⫘⫘ GLOBAL NOMOR ⫘⫘⫘⫘⫘*/
 global.nomorbot = '6287818916348' //Nomor Bot mu
-global.nomorown = '6288210072756' //Nomormu
+global.nomorown = '6288215689772' //Nomormu
 global.namebot = 'LuccyBot' //Nama bot mu
 global.nameown = 'LuxxyVFX' //Nama mu
 
@@ -78,7 +78,7 @@ global.owner = [
   ['6288210072756'], //Owner1
   ['6288210072756'], //Owner2
   ['6288210072756'], //Owner3
-  ['6288210072756', 'LuxxyVFX', true] //Ini buat kamu!
+  ['6288215689772', 'LuxxyVFX', true] //Ini buat kamu!
   // [number, dia creator/owner?, dia developer?]
 ] // Put your number here
 global.mods = [] // Want some help?
