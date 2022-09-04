@@ -1,5 +1,7 @@
 import { createHash } from 'crypto' 
+ import fetch from 'node-fetch' 
  let Reg = /\|?(.*)([.|] *?)([0-9]*)$/i 
+  
  let handler = async function (m, { text, usedPrefix, command }) { 
          function pickRandom(list) { 
    return list[Math.floor(Math.random() * list.length)] 
@@ -25,9 +27,14 @@ import { createHash } from 'crypto'
          {title: "23 Years", rowId: '.daftar ' + namae + '.23 '}, 
          {title: "22 Years", rowId: '.daftar ' + namae + '.22 '}, 
          {title: "21 Years", rowId: '.daftar ' + namae + '.21 '} 
-         {title: "20 Years", rowId: '.daftar ' + namae + '.20 '}, 
-         {title: "19 Years", rowId: '.daftar ' + namae + '.19 '}, 
-         {title: "18 Years", rowId: '.daftar ' + namae + '.18 '}, 
+         ] 
+     }, 
+     { 
+         title: "Y O U N G", 
+         rows: [ 
+             {title: "20 Years", rowId: '.daftar ' + namae + '.20 '}, 
+             {title: "19 Years", rowId: '.daftar ' + namae + '.19 '}, 
+             {title: "18 Years", rowId: '.daftar ' + namae + '.18 '}, 
          {title: "17 Years", rowId: '.daftar ' + namae + '.17 '}, 
          {title: "16 Years", rowId: '.daftar ' + namae + '.16 '}, 
          {title: "15 Years", rowId: '.daftar ' + namae + '.15 '}, 
@@ -42,37 +49,73 @@ import { createHash } from 'crypto'
  ] 
   
  const listMessage = { 
-   text: `Please select your age at the bottom button...\n*Your Name:* ${conn.getName(m.sender)}\nWant a costume name? type *${usedPrefix + command} yourname.age*`, 
-   footer: global.wm, 
-   title: "━━━━「 Registration 」━━━━", 
-   buttonText: "Click Here !", 
+   text: `┏━━━〔 ıll 𝐑𝐄𝐆𝐈𝐒𝐓𝐄𝐑 llı 〕━━㉿
+⬡ Hallo ${conn.getName(m.sender)} 👋
+⬡ Sebelum melihat fitur bot, lebih baik Verify dulu
+⬡ Kalau tidak kelihatan button nya, contohnya dibawah!
+┗━━━━━━━━━━━━━━━━━━㉿
+┏━━〔 ıll CONTOH llı 〕━㉿
+⬡ #daftar namamu.umurmu
+⬡ #daftar ${conn.getName(m.sender)}.17
+┗━━━━━━━━━━㉿ 
+⫹⫺ 
+⫹⫺ `, 
+   footer: `┗ © FangzXD*`, 
+   title: "", 
+   buttonText: "CLICK HERE", 
    sections 
  } 
   
    let user = global.db.data.users[m.sender] 
    if (user.registered === true) throw `[💬] Kamu sudah terdaftar\nMau daftar ulang? *${usedPrefix}unreg <SERIAL NUMBER>*` 
-   if (!Reg.test(text)) return conn.sendMessage(m.chat, listMessage, m) 
+   if (!Reg.test(text)) return conn.sendMessage(m.chat, listMessage, { quoted: m }) 
    let [_, name, splitter, age] = text.match(Reg) 
    if (!name) throw 'Nama tidak boleh kosong (Alphanumeric)' 
    if (!age) throw 'Umur tidak boleh kosong (Angka)' 
    age = parseInt(age) 
    if (age > 30) throw 'WOI TUA (。-`ω´-)' 
-   if (age < 5) throw 'Halah dasar bocil' 
+   if (age < 0) throw 'Halah dasar bocil' 
    user.name = name.trim() 
    user.age = age 
    user.regTime = + new Date 
    user.registered = true 
    let sn = createHash('md5').update(m.sender).digest('hex') 
    let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : m.fromMe ? conn.user.jid : m.sender 
-   m.reply(` 
- ━━━━ 「 *Successful Registration* 」━━━━ 
+   let cap = ` 
+ ┏─• *ᴜsᴇʀs* 
+ │▸ *sᴛᴀᴛᴜs:* ☑️ sᴜᴄᴄᴇssғᴜʟ 
+ │▸ *ɴᴀᴍᴇ:* ${name} 
+ │▸ *ᴀɢᴇ:* ${age} ʏᴇᴀʀs 
+ │▸ *sɴ:* ${sn} 
+ ┗────··· 
   
- ╭─• 〘 INFO 〙 
- │✧ *Name:* ${name} 
- │✧ *Age:* ${age} Years 
- │✧ *Sn:* ${sn} 
- ▣──────··· 
- `.trim()) 
+ ᴅᴀᴛᴀ ᴜsᴇʀ ʏᴀɴɢ ᴛᴇʀsɪᴍᴘᴀɴ ᴅɪᴅᴀᴛᴀʙᴀsᴇ ʙᴏᴛ, ᴅɪᴊᴀᴍɪɴ ᴀᴍᴀɴ ᴛᴀɴᴘᴀ ᴛᴇʀsʜᴀʀᴇ (. ❛ ᴗ ❛.) 
+ ` 
+   let buttonMessage= { 
+ 'document':{'url':sgc}, 
+ 'mimetype':global.ddocx, 
+ 'fileName':'- - - - - ʀᴇɢɪsᴛᴇʀ - - - - -', 
+ 'fileLength':fsizedoc, 
+ 'pageCount':fpagedoc, 
+ 'contextInfo':{ 
+ 'forwardingScore':555, 
+ 'isForwarded':true, 
+ 'externalAdReply':{ 
+ 'mediaUrl':global.sig, 
+ 'mediaType':2, 
+ 'previewType':'pdf', 
+ 'title':global.titlebot, 
+ 'body':global.titlebot, 
+ 'thumbnail':await(await fetch('https://telegra.ph/file/4a7e5f18efaadec18a7a0.jpg')).buffer(), 
+ 'sourceUrl':sgc}}, 
+ 'caption':cap, 
+ 'footer':botdate, 
+ 'buttons':[ 
+ {'buttonId':'.menu','buttonText':{'displayText':'ᴍᴇɴᴜ'},'type':1}, 
+ {'buttonId':'.donasi','buttonText':{'displayText':'ᴅᴏɴᴀsɪ'},'type':1} 
+ ], 
+ 'headerType':6} 
+     await conn.sendMessage(m.chat,buttonMessage, { quoted:m}) 
  } 
  handler.help = ['daftar', 'register'].map(v => v + ' <nama>.<umur>') 
  handler.tags = ['xp'] 
