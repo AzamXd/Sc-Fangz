@@ -197,12 +197,12 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
    {
 	title: `${htki} ▮𝗦𝘁𝗮𝘁𝘂𝘀 」 ${htka}`,
 	rows: [
-	    {title: `📛)ഒ Info Bot`, rowId: ".info", description: "✧ Info nya Fangz BOT ><"},
+	    {title: `📛)ഒ Info Bot`, rowId: ".info", description: "✧ Info nya Luccy BOT ><"},
 	    {title: `💌)ഒ Owner`, rowId: ".owner", description: "✧ Ini Room Developer ku ^~^"},
 	{title: `🗣)ഒ Request Fitur`, rowId: ".request", description: "✧ Request Fitur menarik ke BOT"},
-	{title: `💻)ഒ Bot Stats`, rowId: ".botinfo", description: "✧ Menampilkan Status 赤 FANGZ - BOT"},
+	{title: `💻)ഒ Bot Stats`, rowId: ".botinfo", description: "✧ Menampilkan Status 赤 Luccy - BOT"},
 	{title: `📊)ഒ Test Speed`, rowId: ".testspeed", description: "✧ Test Install Speed BOT"},
-	{title: `⚡)ഒ Speed`, rowId: ".speed", description: "✧ Kecepatan Respon 赤 FANGZ - BOT..."},
+	{title: `⚡)ഒ Speed`, rowId: ".speed", description: "✧ Kecepatan Respon 赤 Luccy- BOT..."},
 	]
     },{
 	title: `${htki} ▮𝗖𝗮𝘁𝗲𝗴𝗼𝗿𝘆 」 ${htka}`,
@@ -294,10 +294,10 @@ let tek = `
 `
 const listMessage = {
   text: tek,
-  footer: '',
+  footer: '© Luccy XD | ALL RESERVED',
   mentions: await conn.parseMention(tek),
   title: ``,
-  buttonText: `ALL MENU`,
+  buttonText: `LIST MENU`,
   sections
 }
   if (teks == '404') {
@@ -625,18 +625,19 @@ function _0x1766() {
     //------------------- BUTTON VID
     //conn.sendButton(m.chat, text, wm, 'https://telegra.ph/file/a46ab7fa39338b1f54d5a.mp4', [['Ping', '.ping'],['Owner', '.owner'],['Donasi', '.donasi']],ftoko, { gifPlayback: true, contextInfo: { externalAdReply: {title: namebot, body: bottime, sourceUrl: sig, thumbnail: fs.readFileSync('./thumbnail.jpg') }}})
     
-  } catch (e) {
-    conn.reply(m.chat, '*📮Upss..*\nSepertinya ada yang eror', m)
-    throw e
-  }
-}
-handler.command = /^(gasmenu|/?)$/i 
-
-handler.register = true
-handler.exp = 3
-
-export default handler
-
+  } catch (e) { 
+     conn.reply(m.chat, 'Maaf, menu sedang error', m) 
+     throw e 
+   } 
+ } 
+ handler.help = ['menu', 'help', '?'] 
+ handler.tags = ['main'] 
+ handler.command = /^(menu|help|\?)$/i 
+  
+ handler.register = true 
+ handler.exp = 3 
+  
+ export default handler
 //----------- FUNCTION -------
 
 function pickRandom(list) {
