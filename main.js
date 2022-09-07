@@ -195,11 +195,11 @@ global.reloadHandler = async function (restatConn) {
 
   conn.welcome = '✧━━━━━━[ *WELCOME* ]━━━━━━✧\n\n┏––––––━━━━━━━━•\n│⫹⫺ @subject\n┣━━━━━━━━┅┅┅\n│( 👋 Hallo @user)\n├[ *INTRO* ]—\n│ *Nama:* \n│ *Umur:* \n│ *Gender:*\n┗––––––━━┅┅┅\n\n––––––┅┅ *DESCRIPTION* ┅┅––––––\n@desc'
   conn.bye = '✧━━━━━━[ *GOOD BYE* ]━━━━━━✧\nSayonara *@user* 👋( ╹▽╹ )'
-  conn.spromote = '@user sekarang admin!'
-  conn.sdemote = '@user sekarang bukan admin!'
+  conn.spromote = '@user Selamat bro udh jadi admin, jangan lupa kasih gorengan ke gw!'
+  conn.sdemote = '@user Hahahah mampus bukan admin lagi!'
   conn.sDesc = 'Deskripsi telah diubah ke \n@desc'
   conn.sSubject = 'Judul grup telah diubah ke \n@subject'
-  conn.sIcon = 'Icon grup telah diubah!'
+  conn.sIcon = 'Icon(tol) grup telah diubah!'
   conn.sRevoke = 'Link group telah diubah ke \n@revoke'
   conn.handler = handler.handler.bind(global.conn)
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn)
