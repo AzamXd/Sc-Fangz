@@ -1,7 +1,7 @@
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 let text = `${htki} SEWA ${htka}`
 const templateButtons = [
-    {index: 1, urlButton: {displayText: 'Klick untuk sewa', url: 'https://wa.me/p/5447696441957458/62895394988123'}},
+    {index: 1, urlButton: {displayText: 'Klick untuk sewa', url: 'https://wa.me/p/5398561120181796/6288210072756'}},
     {index: 4, quickReplyButton: {displayText: '🗳️UPGRADE PREMIUM', id: '.upprem'}},
 ]
 let tm = {
