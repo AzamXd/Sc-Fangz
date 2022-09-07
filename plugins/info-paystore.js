@@ -6,7 +6,7 @@ const sections = [
     title: `✃ INFO`,
 	rows: [
 	    {title: "💸Sewa Bot", rowId: '.belibot', description: 'Dan masukan ke group kalian' },
-	{title: "💸Upgrade Premium", rowId: '.beliprem', description: 'Dan buka fitur premium' },
+	{title: "💸Paid Edit", rowId: '.beliprem', description: 'Jasa Edit Video' },
 	]
     }, {
     title: `✃ INFO`,
