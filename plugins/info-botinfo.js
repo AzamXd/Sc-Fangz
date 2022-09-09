@@ -55,7 +55,7 @@ let handler = async (m, { conn, usedPrefix, __dirname, text, command }) => {
     '*––––––『 BOT INFO 』––––––*', 
 `🤖 ɴᴀᴍᴇ: LuccyBot
 🧩 ᴠᴇʀsɪᴏɴ: ${_package.version}
-📚 ʟɪʙʀᴀʀʏ: ${_package.description}
+📚 ʟɪʙʀᴀʀʏ: Follow TT: @lu6xxy
 👩‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ: LuxxyXyz
 
 ⏳ ᴜᴩᴛɪᴍᴇ: ${uptime}
@@ -74,7 +74,7 @@ let handler = async (m, { conn, usedPrefix, __dirname, text, command }) => {
 ⮕ ${groupsIn.length - groupsIn.length} - Groups Left
 ⮕ ${chats.length - groupsIn.length} - Personal Chats
 ⮕ ${chats.length} - Total Chats
-`.trim(), './media/botinfo.jpg', 'https://fangzbot.websites.co.in/', '🎀ʙᴏᴛ sᴄʀɪᴩᴛ', null, null, [
+`.trim(), './media/botinfo.jpg', 'linktree.com/luxxyxyz/', '🎀ʙᴏᴛ sᴄʀɪᴩᴛ', null, null, [
 [`👑ᴏᴡɴᴇʀ`, `${usedPrefix}owner`],
 [`💱ᴅᴏɴᴀᴛᴇ`, `${usedPrefix}donate`]
 ], m, {asLocation: true})
