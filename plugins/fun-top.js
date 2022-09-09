@@ -37,7 +37,7 @@ m.reply(top, null, {
 contextInfo: {
 mentionedJid: [a, b, c, d, e, f, g, h, i, j]
 }})
-conn.sendFile(m.chat, vn, 'Fangz.Ganz', null, m, true, {
+conn.sendFile(m.chat, vn, 'Luxxy.VFX', null, m, true, {
 type: 'audioMessage',
 ptt: true })
     
