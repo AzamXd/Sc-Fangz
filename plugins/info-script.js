@@ -1,8 +1,7 @@
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => { 
  let text = `*${htki} CIE CARI SCRIPT ${htka}* 
  
- Di Youtube Bnyak, Ini cuma nge recode campuran
-kalau mau make sc ini, silahkan beli di owner🗿
+ 📮Gak Modal, Beli Lah, Dasar Pencuri Script 
  ` 
  const templateButtons = [ 
      {index: 1, urlButton: {displayText: '🐈 Github', url: sgh}}, 
