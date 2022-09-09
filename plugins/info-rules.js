@@ -23,7 +23,7 @@ _Kebijakan privasi atau Private without being in public_
 
 • Jika ada bug/eror di website kami saya mohon untuk Report nya, tanpa biaya dan aman
 
-_Cara penggunaan Fangz BOT Agar terhindar dari Suspand_
+_Cara penggunaan LuccyBot Agar terhindar dari Suspand_
 
 • *Peraturan WhatsApp Bot:*
 1. Users dilarang menelpon maupun memvideo call nomor bot.
