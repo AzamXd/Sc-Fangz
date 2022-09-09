@@ -81,7 +81,7 @@ ${cpus[0].model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type =>
 
 _CPU Core(s) Usage (${cpus.length} Core CPU)_
 ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type => `- *${(type + '*').padEnd(6)}: ${(100 * cpu.times[type] / cpu.total).toFixed(2)}%`).join('\n')}`).join('\n\n')}` : ''}
-`,wm, null, sgh, 'By ꜰᴀɴɢᴢɢᴀɴᴢ', null,null, [[null,null],[null,null],[null,null]], m)
+`,wm, null, sgh, 'By LuxxyVFX', null,null, [[null,null],[null,null],[null,null]], m)
 }
 handler.help = ['ping', 'speed']
 handler.tags = ['info', 'tools']
