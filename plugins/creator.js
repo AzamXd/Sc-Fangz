@@ -9,7 +9,7 @@ let handler = async (m, { conn, args, command }) => {
 let totalf = Object.values(global.plugins).filter(
     (v) => v.help && v.tags
   ).length;
- await conn.sendButton(m.chat, `꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ \n`,after + '\n\n' + titlebot, ow, [['Luxxy','.menu']], m, {
+ await conn.sendButton(m.chat, `꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝  Nyari Ownerku Yakak?? >//<, Nih Nomornya wa.me/6288210072756\n`,after + '\n\n' + titlebot, ow, [['Luxxy','.menu']], m, {
 contextInfo: { externalAdReply :{
                         mediaUrl: '',
                         mediaType: 2,
