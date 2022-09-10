@@ -20,6 +20,6 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) =
  handler.help = ['sc'] 
  handler.tags = ['info'] 
  handler.command = /^(s(ourcode|c))$/i 
-handler.premium = true
+ handler.premium = true
   
  export default handler
