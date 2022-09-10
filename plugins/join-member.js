@@ -17,9 +17,9 @@ user.joinlimit -= 1
 }
 handler.help = ['joinmember']
 handler.tags = ['info','main']
-handler.premium = false
-handler.private = true
-handler.limit = true
+handler.premium = true
+handler.private = false
+handler.limit = false
 
 handler.command = /^joinmember$/i
 
