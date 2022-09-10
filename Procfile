@@ -1,1 +1,1 @@
-worker: npm i -g pm2 && pm2 start main.js && pm2 logs
+worker: node . 'mongodb+srv://luxxyxyz:<luxxyvfx>@cluster0.ez59edu.mongodb.net/?retryWrites=true&w=majority'
