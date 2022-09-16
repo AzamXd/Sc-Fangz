@@ -11,58 +11,18 @@ import fetch from 'node-fetch'
 
 const defaultMenu = {
   before: `
-··────━•〔 llıluccyвσтཻུ⸙͎ 〕•━────··
-
- *〔 llı INFO USER ıll 〕*
- 
-🎐 *Name:* %name
-🎐 *Tag:* %tag
-🎐 *Status:* %prems
-🎐 *Limit:* %limit
-🎐 *Money:* %money
-🎐 *Role:* %role
-🎐 *Level:* %level [ %xp4levelup Xp For Levelup]
-🎐 *Xp:* %exp / %maxexp
-🎐 *Total Xp:* %totalexp
-
-
- *〔 llı TODAY ıll 〕*
- 
-🎐 *%ucpn*
-🎐 *Days:* %week %weton
-🎐 *Date:* %date
-🎐 *Islamic Date:* %dateIslamic
-🎐 *Time:* %wib
-
-
- *〔 llı INFO ıll 〕*
- 
-🎐 *Bot Name:* %me
-🎐 *Mode:* %mode
-🎐 *Platform:* %platform
-🎐 *Type:* Node.Js
-🎐 *Baileys:* Multi Device
-🎐 *Prefix:* [ *%_p* ]
-🎐 *Uptime:* %muptime
-🎐 *Database:* %rtotalreg dari %totalreg
-
-
- *〔 llı INFO COMMAND ıll 〕*
- 
- *🅟* = Premium
- *🅛* = Limit
 
 %readmore
 `.trimStart(),
   header: '%cc *%category* %c1',
   body: '%c2 %cmd %isPremium %islimit',
   footer: '%c3',
-  after: `%c4 %me`,
+  after: `%c4`,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 	let tags
 	let teks = `${args[0]}`.toLowerCase()
-  let arrayMenu = ['all', 'anime', 'update', 'maker', 'edukasi', 'news', 'random', 'game', 'xp', 'islamic', 'stiker', 'rpg', 'kerangajaib', 'quotes', 'admin', 'group', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database','quran', 'vote', 'nsfw', 'audio', 'jadibot', 'info', 'owner', 'store', 'virus']
+  let arrayMenu = ['all', 'anime', 'update', 'maker', 'edukasi', 'news', 'random', 'game', 'xp', 'islamic', 'stiker', 'rpg', 'kerangajaib', 'quotes', 'admin', 'group', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database','quran', 'vote', 'nsfw', 'audio', 'jadibot', 'info', 'owner', 'store', 'virus', 'thnks']
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
   'main': 'Main',
@@ -94,6 +54,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
   'info': 'Info',
   'store': 'Store Menu',
   'virus': '𐐪-〚 Virtex 〛-𐑂',
+  'thnks': 'Thanks To',
 }
   if (teks == 'game') tags = {
     'game': 'Game'
@@ -199,6 +160,9 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
   }
   if (teks == 'virus') tags = {
     'virus': '𐐪-〚 Virtex 〛-𐑂'
+ }
+  if (teks == 'thnks') tags = {
+    'thnks': '𐐪-〚 Thanks To 〛-𐑂'
   }
   try {
   	// DEFAULT MENU
@@ -298,41 +262,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 ]
 
 let usrs = db.data.users[m.sender]
-let tek = `
-───────[ DASHBOARD ]───────
-http://bīt.ly/ByLuxxyᯤ*
-${ucapan()}  ${await conn.getName(m.sender)}
-
-        *〔 llı INFO BOT ıll 〕*
-
-🌸 Uptime: ${mpt}
-🌸 Name: *${await conn.getName(m.sender)}*
-🌸 ${Object.keys(global.db.data.users).length} *Users*
-🌸 ${usrs.limit} *Limit*
-🌸 ${Object.values(global.db.data.users).filter(user => user.registered == true).length} *Unregister*
-🌸 ${Object.keys(global.db.data.users).length} *Register*
-🌸 Level: *${usrs.level}*
-🌸 Platform: *${os.platform()}*
-🌸 ${global.opts['self'] ? 'Private' : 'Publik'} *Mode*
-🌸 Role: *${usrs.role}${usrs.premiumTime > 1 ? `*
-🌸 Expired Premium:
-${clockStringP(usrs.premiumTime - new Date())}` : ''}
-          
-    🗓️ ${new Date().toLocaleDateString()}
-`
-const listMessage = {
-  text: tek,
-  footer: '赤 Luccy - BOT',
-  mentions: await conn.parseMention(tek),
-  title: ``,
-  buttonText: `Click Here ᐢ..ᐢ`,
-  sections
-}
-  if (teks == '404') {
-  	return conn.sendMessage(m.chat, listMessage, { quoted: m, mentions: await conn.parseMention(tek), contextInfo:{ forwardingScore: 99999, isForwarded: true }})
-    }
-  	
- /**************************** TIME *********************/
+/**************************** TIME *********************/
  let wib = moment.tz('Asia/Jakarta').format('HH:mm:ss')
     let wibh = moment.tz('Asia/Jakarta').format('HH')
     let wibm = moment.tz('Asia/Jakarta').format('mm')
@@ -341,6 +271,39 @@ const listMessage = {
     let wita = moment.tz('Asia/Makassar').format('HH:mm:ss')
     let wktuwib = `${wibh} H ${wibm} M ${wibs} S`
  
+let tek = `
+  「 LuccyBOT-MD ⁩㊣ 」
+
+ ╭──〔  𝐈𝐍𝐅𝐎 𝐔𝐒𝐄𝐑  〕─⬣ 
+ │⬡ User :  *${await conn.getName(m.sender)}*
+ │⬡ Premium : *${usrs.premiumTime > 1 ? 'Yes': 'No'}* 
+ │⬡ Name : *${await conn.getName(m.sender)}*
+ │⬡ Status : *${m.sender.split`@`[0] == nomorown ? 'Developer' : (usrs.premiumTime >= 1 ? 'Premium User' : 'Free User')}* 
+ │⬡ Api :  @${m.sender.split`@`[0]}
+ ┌──〔  𝐓 𝐎 𝐃 𝐀 𝐘  〕───⬣ 
+ │⬡ Wib : *${moment.tz('Asia/Jakarta').format('HH:mm:ss')}*
+ │⬡ Wita : *${moment.tz('Asia/Makassar').format('HH:mm:ss')}*
+ │⬡ Wit : *${moment.tz('Asia/Jayapura').format('HH:mm:ss')}*
+ │⬡ Date : *${new Date().toLocaleDateString()}*
+ ┌──〔  𝐃𝐀𝐓𝐀𝐁𝐀𝐒𝐄  〕───⬣ 
+ │⬡ Uptimw : ${mpt}
+ │⬡ Register :  *${Object.values(global.db.data.users).filter(user => user.registered == true).length}*
+ │⬡ Unreg : *${Object.keys(global.db.data.users).length}*
+ │⬡ Os Platform : *${os.platform()}*
+ ╰─────────────⬣
+`
+const listMessage = {
+  text: tek,
+  footer: '© LuxxyVFX | ALL RESERVED',
+  mentions: await conn.parseMention(tek),
+  title: ``,
+  buttonText: `LIST MENU`,
+  sections
+}
+  if (teks == '404') {
+  	return conn.sendMessage(m.chat, listMessage, { quoted: m, mentions: await conn.parseMention(tek), contextInfo:{ forwardingScore: 99999, isForwarded: true }})
+    }
+    
  let mode = global.opts['self'] ? 'Private' : 'Publik'
     let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
     let { age, exp, limit, level, role, registered, money} = global.db.data.users[m.sender]
@@ -518,9 +481,102 @@ const listMessage = {
     let td = `${pickRandom([d1,d2,d3,d4,d5])}`
     
     //------- BUTTON DOC WITH EXTERNAL ADS
-    // MAMPUS DI ENC :v
-    const _0x187932=_0x5c09;function _0x5c09(_0x28b840,_0x244043){const _0x1766bb=_0x1766();return _0x5c09=function(_0x5c09dc,_0x158321){_0x5c09dc=_0x5c09dc-0x1bb;let _0x4031df=_0x1766bb[_0x5c09dc];return _0x4031df;},_0x5c09(_0x28b840,_0x244043);}(function(_0x1c9e83,_0x2eef01){const _0x5e85ab=_0x5c09,_0x179660=_0x1c9e83();while(!![]){try{const _0x4c7814=-parseInt(_0x5e85ab(0x1d0))/0x1*(-parseInt(_0x5e85ab(0x1bd))/0x2)+parseInt(_0x5e85ab(0x1c4))/0x3*(parseInt(_0x5e85ab(0x1bf))/0x4)+parseInt(_0x5e85ab(0x1cc))/0x5*(-parseInt(_0x5e85ab(0x1d1))/0x6)+parseInt(_0x5e85ab(0x1c1))/0x7*(parseInt(_0x5e85ab(0x1bc))/0x8)+parseInt(_0x5e85ab(0x1cd))/0x9*(-parseInt(_0x5e85ab(0x1c7))/0xa)+parseInt(_0x5e85ab(0x1cb))/0xb*(-parseInt(_0x5e85ab(0x1be))/0xc)+parseInt(_0x5e85ab(0x1ce))/0xd;if(_0x4c7814===_0x2eef01)break;else _0x179660['push'](_0x179660['shift']());}catch(_0x2b3360){_0x179660['push'](_0x179660['shift']());}}}(_0x1766,0x70ad5));let buttonMessage={'document':{'url':sgc},'mimetype':td,'fileName':global['wm'],'fileLength':fsizedoc,'pageCount':fpagedoc,'contextInfo':{'forwardingScore':0x22b,'isForwarded':!![],'externalAdReply':{'mediaUrl':global[_0x187932(0x1c8)],'mediaType':0x2,'previewType':_0x187932(0x1c9),'title':global['titlebot'],'body':global['titlebot'],'thumbnail':await(await fetch(thumb))[_0x187932(0x1ca)](),'sourceUrl':sgc}},'caption':text,'footer':botdate,'buttons':[{'buttonId':'.sewa','buttonText':{'displayText':_0x187932(0x1bb)},'type':0x1},{'buttonId':_0x187932(0x1c5),'buttonText':{'displayText':_0x187932(0x1c0)},'type':0x1},{'buttonId':_0x187932(0x1c6),'buttonText':{'displayText':'🎀Version Bot'},'type':0x1}],'headerType':0x6};await conn[_0x187932(0x1c2)](m[_0x187932(0x1cf)],buttonMessage,{'quoted':m,'mentionedJid':[m[_0x187932(0x1c3)]]});function _0x1766(){const _0x1c60e8=['3ezQcUH','.nameown','.cekversi','725770ccnUBU','sig','pdf','buffer','305624SHQwwY','233195fjGJSZ','72BjUaMS','2869867kBKaey','chat','6NokiEm','72PsFaxu','🎐Sewa Bot','1832yREmVQ','205026IsvCrH','132IBvmfp','3329164htczQJ','🌹Author','7315FCLnNH','sendMessage','sender'];_0x1766=function(){return _0x1c60e8;};return _0x1766();}
-    
+    const _0x187932 = _0x5c09;
+
+function _0x5c09(_0x28b840, _0x244043) {
+	const _0x1766bb = _0x1766();
+	return _0x5c09 = function(_0x5c09dc, _0x158321) {
+		_0x5c09dc = _0x5c09dc - 0x1bb;
+		let _0x4031df = _0x1766bb[_0x5c09dc];
+		return _0x4031df;
+	}, _0x5c09(_0x28b840, _0x244043);
+}(function(_0x1c9e83, _0x2eef01) {
+	const _0x5e85ab = _0x5c09, _0x179660 = _0x1c9e83();
+	while ( !! []) {
+		try {
+			const _0x4c7814 = -parseInt(_0x5e85ab(0x1d0)) / 0x1 * (-parseInt(_0x5e85ab(0x1bd)) / 0x2) + parseInt(_0x5e85ab(0x1c4)) / 0x3 * (parseInt(_0x5e85ab(0x1bf)) / 0x4) + parseInt(_0x5e85ab(0x1cc)) / 0x5 * (-parseInt(_0x5e85ab(0x1d1)) / 0x6) + parseInt(_0x5e85ab(0x1c1)) / 0x7 * (parseInt(_0x5e85ab(0x1bc)) / 0x8) + parseInt(_0x5e85ab(0x1cd)) / 0x9 * (-parseInt(_0x5e85ab(0x1c7)) / 0xa) + parseInt(_0x5e85ab(0x1cb)) / 0xb * (-parseInt(_0x5e85ab(0x1be)) / 0xc) + parseInt(_0x5e85ab(0x1ce)) / 0xd;
+			if (_0x4c7814 === _0x2eef01) break;
+			else _0x179660['push'](_0x179660['shift']());
+		} catch (_0x2b3360) {
+			_0x179660['push'](_0x179660['shift']());
+		}
+	}
+}(_0x1766, 0x70ad5));
+let buttonMessage = {
+	'document': {
+		'url': sig
+	},
+	'mimetype': td,
+	'fileName': global['hiasan'],
+	'fileLength': fsizedoc,
+	'pageCount': fpagedoc,
+	'contextInfo': {
+		'forwardingScore': 0x22b,
+		'isForwarded': !! [],
+		'externalAdReply': {
+			'mediaUrl': global['sig'],
+			'mediaType': 2,
+			'previewType': _0x187932(0x1c9),
+			'title': wm,
+			'body': global['bottime'],
+			'thumbnail': await (await fetch(thumb)).buffer(),
+			'sourceUrl': sig
+		}
+	},
+	'caption': text,
+	'footer': dmenuf,
+	'buttons': [{
+		'buttonId': '.report',
+		'buttonText': {
+			'displayText': '🍭CUSTOMER SERVICE'
+		},
+		'type': 1
+	}, {
+		'buttonId': '.testspeed',
+		'buttonText': {
+			'displayText': '🥞SPEED NET'
+		},
+		'type': 1
+	}, {
+		'buttonId': '.sc',
+		'buttonText': {
+			'displayText': '📑SCRIPT BOT'
+		},
+		'type': 1
+	}],
+	'headerType': 6
+};
+/*
+await conn[_0x187932(0x1c2)](m[_0x187932(0x1cf)], buttonMessage, {
+	'quoted': m,
+	'mentionedJid': [m[_0x187932(0x1c3)]]
+});
+*/
+
+	/** Baru */
+	let img = fs.readFileSync('./img/atas.png')
+	let img2 = fs.readFileSync('./img/bawah.png')
+	return conn.sendButton(m.chat, text, wm, img2, [["🥞MENU", _p + "menu"], ["🌸SCRIPT", _p + "sc"]], m, {
+        contextInfo: {
+            externalAdReply: {
+                mediaUrl: "https://instagram.com/luxxyxyz=",
+                mediaType: "VIDEO",
+                title: '꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦',
+                body: 'Source Code By LuxxyVFX',
+                previewType: 0,
+                thumbnail: img
+            }
+        }
+    })
+
+
+function _0x1766() {
+	const _0x1c60e8 = ['3ezQcUH', '.nameown', '.cekversi', '725770ccnUBU', 'sgc', 'pdf', 'buffer', '305624SHQwwY', '233195fjGJSZ', '72BjUaMS', '2869867kBKaey', 'chat', '6NokiEm', '72PsFaxu', '🎐Sewa Bot', '1832yREmVQ', '205026IsvCrH', '132IBvmfp', '3329164htczQJ', '🌹Author', '7315FCLnNH', 'sendMessage', 'sender'];
+	_0x1766 = function() {
+		return _0x1c60e8;
+	};
+	return _0x1766();
+}
 //-------DOC TEMPLATE
     const message = {
             document: { url: thumbdoc },
@@ -535,7 +591,7 @@ const listMessage = {
                 {
                     urlButton: {
                         displayText: `${namebot}`,
-                        url: 'linktree/luxxyxyz'
+                        url: 'https://linktr.ee/luxxyxyz'
                     }
                 },
                 {
@@ -569,18 +625,19 @@ const listMessage = {
     //------------------- BUTTON VID
     //conn.sendButton(m.chat, text, wm, 'https://telegra.ph/file/a46ab7fa39338b1f54d5a.mp4', [['Ping', '.ping'],['Owner', '.owner'],['Donasi', '.donasi']],ftoko, { gifPlayback: true, contextInfo: { externalAdReply: {title: namebot, body: bottime, sourceUrl: sig, thumbnail: fs.readFileSync('./thumbnail.jpg') }}})
     
-  } catch (e) {
-    conn.reply(m.chat, '📮Maaf, menu sedang error', m)
-    throw e
-  }
-}
-handler.command = /^(menu|\?)$/i
-
-handler.register = true
-handler.exp = 3
-
-export default handler
-
+  } catch (e) { 
+     conn.reply(m.chat, 'Maaf, menu sedang error', m) 
+     throw e 
+   } 
+ } 
+ handler.help = ['menu', 'help', '?'] 
+ handler.tags = ['main'] 
+ handler.command = /^(menu|help|\?)$/i 
+  
+ handler.register = true 
+ handler.exp = 3 
+  
+ export default handler
 //----------- FUNCTION -------
 
 function pickRandom(list) {
