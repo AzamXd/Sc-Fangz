@@ -35,11 +35,11 @@ ${botdate}
 `
 	let tujuan = `${htki} MENFES ${htka}`
 	if (!m.quoted) {
-		await conn.sendHydrated(mention, tujuan, cap, thumbmenfes, 'https://wa.me/62895394988123?text=.menfes', '💬 Balas pesan', null, null, [
+		await conn.sendHydrated(mention, tujuan, cap, thumbmenfes, 'https://wa.me/6287818916348?text=.menfes', '💬 Balas pesan', null, null, [
 			[null, null]
 		], null)
 	} else {
-		await conn.sendHydrated(mention, tujuan, cap, thumbmenfes, 'https://wa.me/62895394988123?text=.menfes', '💬 Balas pesan', null, null, [
+		await conn.sendHydrated(mention, tujuan, cap, thumbmenfes, 'https://wa.me/6287818916348?text=.menfes', '💬 Balas pesan', null, null, [
 			[null, null]
 		], null)
 		let media = q ? await m.getQuotedObj() : false || m
