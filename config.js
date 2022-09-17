@@ -73,6 +73,7 @@ global.serialimg = 'https://telegra.ph/file/c819639e302a1b9b64cca.jpg'
 global.jlimit = 'https://telegra.ph/file/4f6999efe00f4cfeed4f2.jpg'
 global.verify = 'https://telegra.ph/file/0b85b04058b940c1536f2.jpg'
 global.guest = 'https://telegra.ph/file/e0a5bc06a4f619c9a5115.jpg'
+global.thumbmenfes = 'https://telegra.ph/file/0450b7c00a9e151b4bbfe.jpg'
 /*⫘⫘⫘⫘ STAFF ⫘⫘⫘⫘⫘*/
 global.owner = [
   ['6288210072756'], //Owner1
